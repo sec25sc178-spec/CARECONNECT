@@ -1,0 +1,24 @@
+[
+  {
+    "id": "R001",
+    "name": "Ramanathan K",
+    "age": 72,
+    "location": "Chennai Central",
+    "lastSeenDate": "2026-10-06",
+    "contactName": "Meena K",
+    "contactPhone": "9000000001",
+    "description": "Wearing a light blue shirt and dark trousers. Carries a small black walking stick.",
+    "status": "active"
+  },
+  {
+    "id": "R002",
+    "name": "Lakshmi Devi",
+    "age": 68,
+    "location": "Tambaram Bus Stand",
+    "lastSeenDate": "2026-10-02",
+    "contactName": "Arun S",
+    "contactPhone": "9000000002",
+    "description": "Wearing a green saree with a cream shawl. Please approach calmly and contact the family.",
+    "status": "active"
+  }
+]

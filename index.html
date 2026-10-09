@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FindSafe - Lost Elderly Person</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">COMMUNITY SAFETY PROTOTYPE</p>
+      <h1>FindSafe</h1>
+      <p>Report and search for lost elderly persons quickly and responsibly.</p>
+      <button id="openReportBtn" class="primary">+ Report Missing Person</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="stats">
+      <div class="stat-card"><strong id="totalCount">0</strong><span>Total Reports</span></div>
+      <div class="stat-card"><strong id="activeCount">0</strong><span>Active Reports</span></div>
+      <div class="stat-card"><strong id="resolvedCount">0</strong><span>Resolved</span></div>
+    </section>
+
+    <section class="panel">
+      <div class="toolbar">
+        <input id="searchInput" type="search" placeholder="Search by name, location or description...">
+        <select id="statusFilter">
+          <option value="all">All statuses</option>
+          <option value="active">Active</option>
+          <option value="resolved">Resolved</option>
+        </select>
+      </div>
+    </section>
+
+    <section>
+      <h2>Missing Person Reports</h2>
+      <div id="reportsList" class="reports"></div>
+      <p id="emptyState" class="empty hidden">No matching reports found.</p>
+    </section>
+  </main>
+
+  <div id="reportModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeModalBtn" class="close" aria-label="Close">×</button>
+      <h2>Report Missing Person</h2>
+      <form id="reportForm">
+        <div class="grid">
+          <label>Name <input name="name" required maxlength="80"></label>
+          <label>Age <input name="age" type="number" min="1" max="120" required></label>
+          <label>Last-seen location <input name="location" required maxlength="120"></label>
+          <label>Date last seen <input name="lastSeenDate" type="date" required></label>
+          <label>Contact name <input name="contactName" required maxlength="80"></label>
+          <label>Contact phone <input name="contactPhone" type="tel" required maxlength="20"></label>
+        </div>
+        <label>Description
+          <textarea name="description" rows="4" required maxlength="500" placeholder="Clothing, identifying features, safe information..."></textarea>
+        </label>
+        <button class="primary" type="submit">Submit Report</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
